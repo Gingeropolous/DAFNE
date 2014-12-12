@@ -1,0 +1,168 @@
+Primary assumption for the following: The protocol is imagined for a post-fiat world, where only cryptocurrencies exist. 
+
+The Problem: Bitcoin (and most other cryptocurrencies) is a deflationary binary currency system in which fractional reserve banking is not possible because a bank can’t create bitcoins out of thin air. 
+
+Both of these aspects make it difficult for bitcoin to integrate into our contemporary financial system as a currency. 
+
+A deflationary currency might decrease money velocity because of the increasing value of the currency discouraging spending (yes, this is a debate and experiment that we have all just embarked upon). Also, a deflationary currency may negate the incentive to invest. Why risk your money if your moneys going up in value anyway?
+
+A binary currency makes it difficult for conventional banking and lending systems to work. Binary here is referring to the fact that you either have the currency or you don’t. You either have 1 BTC in the bank wallet or you don’t. You can’t take a deposit from someone in BTC, then loan out 0.8 of that BTC, and still have 1 BTC available to the depositor. (yes, this is a crude painting of fractional reserve banking, but work with me). 
+
+
+Thus, I present the Decentralized Autonomous Lending Protocol
+(and Granting and perhaps payroll and automatic payments why not)
+
+This is presented in a fashion where the underlying technology is only roughly sketched. Instead I focus on the user experience and the fundamentals of the system in the hopes that someone with expert knowledge of coding and what-have-you can make this into reality. 
+
+The idea is to create a lending protocol for the bitcoin network that works within the currency - no creation of a new coin or asset required. 
+
+The network gets its security from the same technology that bitcoin does - the blockchain.
+
+However, unlike bitcoin, a lending protocol requires something to mitigate risk - that is, if I lend bitcoins to someone, how do I know they’ll pay me back. The protocol will utilize 3 components - 2 of which are algorithm-based, and the 3rd of which is human-dependent. 
+
+The protocol primarily mitigates risk by distributing the risk. 
+A secondary mitigation is a decentralized autonomous reserve
+Finally, the protocol allows for a trust network to be built.
+
+The protocol will exist as a blockchain on an alternate chain - a blockchain completely separate from bitcoin, however utilizing the exact same technology in order to capitalize on the network power of bitcoin. To be described later is how participating in validating the Lendchain will provide rewards to miners. 
+
+Because this will exist on a seperate blockchain, this protocol requires a secondary wallet, called the lendwallet. This lend wallet ultimately communicates with both the bitcoin blockchain and the lendchain. 
+
+How the lending process works:
+
+Jane wants a loan for 100 BTC. In order to take out a loan, she must participate in the network by installing a lendwallet. She must also transfer into the lendwallet some amount of bitcoin. In one variation, we can imagine that you are only permitted to borrow 10X the amount of bitcoin you have placed in your lendwallet. Think of this as a minimum deposit required in a bank. 
+
+So after Jane deposits 10 BTC into her lendwallet, she selects “request loan” and fills out the details - mainly, the amount, the repayment period, and the interest she will offer. Additionally, there is space in the loan application to provide more information - what the loan is for, or space to include a web address or phone number such that lenders can further investigate the loan request. 
+
+She then submits the loan application out to the network, and this is stored on the blockchain. Other people with lendwallets are notified of this loan application, and they can choose to invest in it.
+
+When a loan application first enters the network, it is clearly high risk - some random person wants you to send them some BTC. If you find the application convincing enough, you can choose to be the First into the loan. Being the first provides some bonus, because you have taken the most risk in this loan. 
+
+So Bill sees Janes loan application and decides to be the First. He doesn’t have much BTC to invest, so he only claims 1 BTC of the loan. Because he can only provide 1/100 BTC towards the loan, he can only claim some % of the First reward. Besides, its in his interest to share the First reward with other initiators, so that they will initiate. 
+
+So now the blockchain has stored that Jane sent out a loan request for 100 BTC, and Bill has put 1 BTC towards it and claimed X% of the First reward. 
+
+The blockchain has been updated. On Donna’s screen, she sees the loan and a “1% backed, 90% First Remaining””, and now Donna sees that the loan has some backing. Donna thinks “maybe Bill trusts Jane”, so she decides to put 5 BTC in and claim 20% of the First reward.
+
+Now, when Bill and  Donna put their BTC into this loan, what they are doing is sending their BTC to a script that will only release BTC to Jane if the loan is fulfilled. So in Bill and Donna’s lendwallet, they are -1 and -5 BTC respectively, although the BTC haven’t been transferred yet. 
+
+This continues, and the information keeps getting added to the blockchain for Jane’s loan application. 
+
+By 40% fulfillment, the First reward is probably gone. A lot of members on the network see the loan is 40% backed, and think its a worthy investment, but they don’t want to risk much. So lets just assume for simplicities sake that the remainder of the loan is filled with people putting up 0.001 BTC each….
+
+thats 60,000 people investing into this loan.
+
+Which is totally doable.
+
+Because its decentralized and autonomous and its all stored in the blockchain!
+
+So the loan is filled. The blockchain script recognizes that the loan has been filled and activates the transfer on the bitcoin network and tens of thousands of transactions occur in order to fill Jane’s loan request. 100 BTC shows up in Jane’s Lendwallet. Jane transfers the 100 BTC to wherever and does whatever she needs to do. And she starts paying the loan back every month.
+
+To make payments, she transfers BTC to the lendwallet, and then goes to “make loan payment”. She clicks on the loan that she wants to pay, and submits a payment. 
+
+The payment activates the loan transaction in reverse. When Jane hits “submit payment” button, this information is sent to the blockchain. The transaction that was initiated upon filling Jane’s loan is then found and the transaction occurs in reverse, with Jane’s payment being split 10’s of thousands of ways… because hey, its digital currency!
+
+Lets assume Jane’s loan was for a car, and she asked for 5 years. To keep things simple, lets just say she offered 5% interest (and I won’t compound it because I don’t feel like finding that excel function). So she pays 1.75 BTC per month. So the interest in each payment is 0.0875. 
+
+Here’s how the interest would get broken down.
+
+10% to the miners (split evenly between lendchain and bitcoin blockchain)
+5% to the Decentralized Autonomous Reserve (DAR)
+10% to the Firsts
+Remaining 75% go to lenders. 
+
+So, the lendchain miners will get a reward for every new block mined. This reward will be funded by some of the interest rate.
+
+5% of the interest rate will go into the BTC transaction for the transaction costs of BTC.
+
+10% goto the Firsts based on how it was divied up, and the remaining 75% goes back to the lenders based on their stake in the loan.
+
+Now whats this decentralized autonomous reserve?
+
+The Decentralized Autonomous Reserve is a mechanism for the network to provide insurance for lenders. Additionally, it is a means of revenue for those participating in the network (DAR Dividends). In a nutshell, the DAR is a pot of money that can be used to pay back lenders some percentage of a defaulted loan. How much insurance is provided is dependent on how many people have backed the loan. 
+
+This prevents any exploitation of the reserve by exploiting the fact that collusion decreases as you increase the number of people involved. 
+
+How the Decentralized Autonomous Reserve works. How the loans are insured based on the community backing.
+
+< 100 people backing : 0% loan insured
+100% insured occurs at 500 000
+Insurance rate is exponential from 101 - 5,000 lenders for 50%
+
+For 5,000 at 50%
+
+X = 0.459308
+
+percent insured = (# of lenders)^0.459308
+
+101 = 8.329%
+1000 = 23.874%
+2000 = 32.8%
+3000 = 39.5
+4000 = 45.12
+5000 = 50%
+
+Then 100% at 500,000
+x = 0.29834
+
+percent insured = 50% + (# of lenders - 5000)^0.29834
+6000 = 57%
+10 000 = 62.69%
+100 000 = 79.5%
+400 000 = 97%
+
+So here you can see that the loan is only fully insured when 500,000 people have backed the loan. In the Jane / Bill / Donna example above, with roughly 60,000 people backing the loan, only 75% of the loan is insured. And the numbers above can be modified or made to float based on participation in the network.
+
+For example, if the network contains 300 million lendwallets, then the 50% would be at 500,000 and 100% would be at something like 5 million. And perhaps the lower threshold should be 500 or something. 
+
+This prevents this type of collusion: Jane goes to Bill and Donna and says “Hey, I’m going to take out a loan application for 100 BTC and totally never pay it. You two should back the loan, and then when i don’t pay it, the DAR will totally put money in your lendwallets!” In the basic plan outlined above, if Jane, Bill and Donna can convince 97 of their friends to collude with them to screw the system, they would only get 8.3% back, split between 100 people. 
+
+So for the DDR, its a matter of identifying certain #’s that will provide people security and deter collusion. 
+
+An insurance payment will be made based on some TBD set of rules - if a loan goes unpaid for over X amount of months, the DDR kicks in to start paying back on a monthly basis up to the insure point. 
+
+How is money in the DAR stored? 
+
+This is where some of the folks with more knowledge of the technology would come in handy, but I imagine it as this:
+
+In the lendwallet there will be two balances - the balance of your personal funds in the lendwallet, and the balance of your share of the DDR. Your share of the DDR is determined based on the amount of BTC you have loaned. 
+
+So, if you have loaned out 50 BTC, and the DDR is currently at X BTC, the amount of BTC in your personal lendwallet DDR is at least 50 / X. For simplicities sake, lets say its 1 BTC. 
+
+This 1 BTC is stored locally on your computer but is not accessible by you - you can’t spend that 1 BTC, only the network can. 
+
+However, because the information associated with that bitcoin is on your computer, the reserve protects itself from being robbed - its decentralized. It also protects itself from being manipulated, because its autonomous.  
+
+What is a DAR Dividend?
+
+The purpose of the DAR is to provide insurance against people defaulting on their loans so that people will actually invest in loan applications from strangers. The purpose of the DAR is not to accumulate massive amounts of wealth. Thus, there will be some algorithm that calculates how much money is required in the DAR based on the amount of loans currently floating in the loanchain. If total DAR funds exceeds what is necessary, the difference between these two values will be distributed to lenders in proportion to the amount of money they currently are lending (averaged over the month). This again provides incentive for individuals to participate in filling loans. 
+
+
+Why did all of those idiots buy into Jane’s loan for 0.001 BTC? Surely they won’t get that much back on their investment!
+
+
+Indeed, they won’t get back on the single investment they made into Jane, but these individuals may have made thousands of different investments. In theory, they could split 1 BTC into 100 million satoshis and thus have 100 million loans out to people. By distributing these small amounts of currencies, these individuals are able to diversify their risk and thus mitigate the risk. 
+
+Other network features:
+Automatic credit history - all of your actions are recorded on the loanchain, so lenders can get an immediate picture of what kind of borrower you are. No more magic numbers from strange companies. 
+
+Grant function - the same mechanism for loan applications can be utilized for grants (a.k.a. crowdfunding). In this case, the BTC are simply not expected to be paid back. 
+
+Emergent trust networks - If Jane is a good borrower, Jane might know people in the real world that also need to borrow money that may have no history on the network, such as Ralph. So Ralph puts his loan app on the network, and Jane backs 50% of it immediately. Alternatively, if jane doesn’t want to front the money, Jane can just put the loan app out herself, and then its up to her to get Ralph to pay back the loan. In a way, trusted borrowers on the network may be able to charge a commission to non-trusted borrowers. 
+
+
+Possible exploits (unique to this network, ignoring the existing blockchain exploits)
+
+The Spread The Wealth loan - Someone could put out a loan app with the explicit intention of distributing a portion of the DAR to those that claim a stake in the loan. For instance, one could request a 1 BTC loan for this purpose, and theoretically 100 000 000 people could claim a 1 satoshi stake in the loan. The borrower never pays, and 100 000 000 people get 1 satoshi each from the DAR. 
+
+One could create a countermeasure by including a “ban” option in the lendwallet, and if the network reaches a simple majority ( > 50%), the loan could be denied. Alternatively, the number of backers required for insurance could be increased substantially. 
+
+Alternatively, the STW loan could be utilized as a decentralized autonomous crowdsourced way to ease difficult financial times - essentially, create liquidity (essentially what the fed does by printing money, but in this case the money isn’t being printed, its just being released). However, the borrower now has 1 BTC. So if it were used in this manner, the backers of the STW loan would have to trust that the borrower would similarly distribute the loaned bitcoin. 
+
+A strength of the system: Autonomous “quantitative easing” - type liquidity measures. 
+
+If STW loans are filled, and the DAR is drained, this might causing a decrease in lending, which ultimately decreases the DAR. 
+
+However, the decrease in lending would reduce the amount of loans that need to be insured, so the dividend payments for network participants would skyrocket, essentially distributing the DAR anyway. 
+
+In general, if market conditions get to the point where lending is decreasing, the amount of money required in the DAR will naturally decrease (because there are no loans to insure), thus causing an increase in DAR Dividends, which would spread the money around and potentially encourage lending. 
